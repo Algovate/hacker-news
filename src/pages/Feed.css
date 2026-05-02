@@ -1,0 +1,138 @@
+.feed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feed-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.feed-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.feed-subtitle {
+  color: var(--text-secondary);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.loading-state,
+.empty-state {
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.loader {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 3px solid rgba(249, 115, 22, 0.2);
+  border-top-color: var(--accent-primary);
+  animation: spin 0.9s linear infinite;
+}
+
+.story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.story-card {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.story-rank {
+  display: grid;
+  place-items: center;
+  align-self: start;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  color: var(--accent-primary);
+  background: rgba(249, 115, 22, 0.1);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.story-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.story-meta-row,
+.story-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
+
+.story-badge,
+.story-time {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.story-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.story-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+
+.story-title:hover {
+  color: var(--accent-secondary);
+}
+
+.story-stats {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.story-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .feed-container {
+    gap: 1.25rem;
+  }
+
+  .story-card {
+    grid-template-columns: 1fr;
+  }
+
+  .story-rank {
+    width: 44px;
+    height: 44px;
+  }
+}
