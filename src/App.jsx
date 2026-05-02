@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 
 const Feed = lazy(() => import('./pages/Feed'));
@@ -7,7 +7,7 @@ const Stats = lazy(() => import('./pages/Stats'));
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app-container">
         <Sidebar />
         <main className="main-content">
@@ -20,7 +20,7 @@ function App() {
           </Suspense>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

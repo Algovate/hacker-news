@@ -46,6 +46,24 @@ npm run build
 npm run preview
 ```
 
+## Deploy to GitHub Pages
+
+This repository is configured to deploy automatically to GitHub Pages with GitHub Actions.
+
+1. Push `main` to GitHub.
+2. Open `Settings -> Pages` in the repository.
+3. Set the Pages source to `GitHub Actions`.
+4. Each push to `main` will publish a fresh build.
+
+Expected site URL:
+
+- [https://algovate.github.io/hacker-news/](https://algovate.github.io/hacker-news/)
+
+Production routing uses hash URLs so refreshes work on GitHub Pages:
+
+- `https://algovate.github.io/hacker-news/#/top`
+- `https://algovate.github.io/hacker-news/#/stats`
+
 ## Routes
 
 - `/top`
